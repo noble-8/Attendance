@@ -16,15 +16,30 @@ app.get('/', function (req, res) {
 })
 
 
-app.post('/', function (req, res) {
+app.post('/swipeIn', function (req, res) {
 
-	res.send('This shit is working maaanzs\n');
+	res.send("Valar Dohaeris");
  	var row = [];
  	console.log(req.body)
- 	// row.push(req.body.username);
- 	// row.push(req.body.pwd);
- 	// console.log(row);
- 	// xls.postToExcel(1,row);
+ 	row.push(req.body.ID);
+ 	row.push(req.body.lat);
+ 	row.push(req.body.long);
+ 	row.push(getTime())
+ 	console.log(row);
+ 	xls.postToExcel(1,row);
+})
+
+app.post('/swipeOut', function (req, res) {
+
+	res.send("Valar Morghulis");
+ 	var row = [];
+ 	console.log(req.body)
+ 	row.push(req.body.ID);
+ 	row.push(req.body.lat);
+ 	row.push(req.body.long);
+ 	row.push(getTime())
+ 	console.log(row);
+ 	xls.postToExcel(2,row);
 })
 
 
@@ -34,3 +49,20 @@ var server = app.listen(8081, function () {
    
    console.log("Example app listening at http://%s:%s", host, port)
 })
+
+function getTime() {
+
+    var date = new Date();
+
+    var hour = date.getHours();
+    hour = (hour < 10 ? "0" : "") + hour;
+
+    var min  = date.getMinutes();
+    min = (min < 10 ? "0" : "") + min;
+
+    var sec  = date.getSeconds();
+    sec = (sec < 10 ? "0" : "") + sec;
+
+    return hour + ":" + min + ":" + sec;
+
+}
