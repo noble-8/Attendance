@@ -1,0 +1,5 @@
+use attendance;
+empl;
+swipeIn;
+swipeOut;
+insert into swipeIn values ("353400090208922","N22°17'30.93713","E73°7'45.76332","16:17:36","08:06:2019");
