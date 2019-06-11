@@ -13,11 +13,11 @@ module.exports = {
 		  host: hostname,
 		  user: guser,
 		  password: password,
-		  database: attendance
+		  database: database
 		});
 
 		con.connect(function(err) {
-		  if (err) throw err;
+		  if (err) console.log(err);
 		  console.log("Connected!");
 		  var sql = "INSERT INTO swipeIn (IMEI, LAT,LON,time,date) VALUES ("+
 		  "\""+IMEI+"\""+
@@ -31,7 +31,39 @@ module.exports = {
 		  +date+"\""+
 		  ");";
 		  con.query(sql, function (err, result) {
-		    if (err) throw err;
+		    if (err) console.log(err);
+		    console.log("1 record inserted");
+	  		});
+
+		});
+	},
+
+	swipeOut: function  (IMEI,LAT,LON,time,date){
+		var mysql = require('mysql');
+
+		var con = mysql.createConnection({
+		  host: hostname,
+		  user: guser,
+		  password: password,
+		  database: database
+		});
+
+		con.connect(function(err) {
+		  if (err) console.log(err);
+		  console.log("Connected!");
+		  var sql = "INSERT INTO swipeOut (IMEI, LAT,LON,time,date) VALUES ("+
+		  "\""+IMEI+"\""+
+		  ","+
+		  "\""+LAT+"\""
+		  +","+
+		  "\""+LON+"\""+
+		  ","+"\""
+		  +time+"\""+
+		  ","+"\""
+		  +date+"\""+
+		  ");";
+		  con.query(sql, function (err, result) {
+		    if (err) console.log(err);
 		    console.log("1 record inserted");
 	  		});
 
@@ -71,38 +103,6 @@ module.exports = {
 
 		});
 		return resultant;
-	},
-
-	getData: function(){
-
-		
-		
-
-		var seq = function(){
-				var mysql = require('mysql');
-				var con = mysql.createConnection({
-					host: hostname,
-					user: guser,
-					password: password,
-					database: database
-				});
-
-
-			
-				con.connect(function(err) {
-					if (err) console.log(err);
-					con.query("SELECT * FROM swipeIn;", function (err, result, fields) {
-			 			if (err)  console.log(err);
-			    		// console.log(result);
-			    		return result;
-			  		});
-				});
-		}
-
-		
-		
-		return seq
-		
 	}
 };
 

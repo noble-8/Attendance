@@ -1,149 +1,156 @@
 <html>
 <head>
 <style>
-#customers {
+#day {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-#customers td, #customers th {
+#day td, #day th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#day tr:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+#day tr:hover {background-color: #ddd;}
 
-#customers th {
+#day th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: #4CAF50;
   color: white;
 }
+
+#dayout {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#dayout td, #dayout th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#dayout tr:nth-child(even){background-color: #f2f2f2;}
+
+#dayout tr:hover {background-color: #ddd;}
+
+#dayout th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+#yest {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#yest td, #yest th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#yest tr:nth-child(even){background-color: #f2f2f2;}
+
+#yest tr:hover {background-color: #ddd;}
+
+#yest th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+#yestout {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#yestout td, #yestout th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#yestout tr:nth-child(even){background-color: #f2f2f2;}
+
+#yestout tr:hover {background-color: #ddd;}
+
+#yestout th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
 </style>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src = "data.js">
+    
+ </script>
 </head>
 <body>
-<font size = 7> day Before</font>
+<font size = 7> yesterday's Swipe in data</font>
 
-<table id="customers">
+<table id="yest">
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>Name</th>
+    <th>Lattitude</th>
+    <th>Longitude</th>
+    <th>Time</th>
   </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Berglunds snabbköp</td>
-    <td>Christina Berglund</td>
-    <td>Sweden</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Königlich Essen</td>
-    <td>Philip Cramer</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>North/South</td>
-    <td>Simon Crowther</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Paris spécialités</td>
-    <td>Marie Bertrand</td>
-    <td>France</td>
-  </tr>
+ 
 </table>
-<font size = 7> yesterday</font>
 
+<br>
 
-<table id="customers">
+<font size = 7> yesterday's Swipe Out data</font>
+
+<table id="yestout">
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>Name</th>
+    <th>Lattitude</th>
+    <th>Longitude</th>
+    <th>Time</th>
   </tr>
+ 
+</table>
+<br>
+
+<font size = 7> day Before's swipe in Data</font>
+
+<table id="day">
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <th>Name</th>
+    <th>Lattitude</th>
+    <th>Longitude</th>
+    <th>Time</th>
   </tr>
+ 
+</table>
+<br>
+
+<font size = 7> day Before's swipe Out Data</font>
+
+<table id="dayout">
   <tr>
-    <td>Berglunds snabbköp</td>
-    <td>Christina Berglund</td>
-    <td>Sweden</td>
+    <th>Name</th>
+    <th>Lattitude</th>
+    <th>Longitude</th>
+    <th>Time</th>
   </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Königlich Essen</td>
-    <td>Philip Cramer</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>North/South</td>
-    <td>Simon Crowther</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Paris spécialités</td>
-    <td>Marie Bertrand</td>
-    <td>France</td>
-  </tr>
+ 
 </table>
 
 </body>
